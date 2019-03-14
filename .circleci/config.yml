@@ -33,7 +33,7 @@ jobs:
       - store_test_results: # for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
           path: app/build/test-results
       # See https://circleci.com/docs/2.0/deployment-integrations/ for deploy examples
-      - run: find / -name "*.apk" -ls 
+      - run: find /tmp/myworkspace -name "*.apk" -ls && exit 0
         #- run: cp $CIRCLE_ARTIFACTS/apk/app-debug.apk /tmp/myworkspace/test.apk
       - run: cp apk/app-debug.apk /tmp/myworkspace/test.apk
       #- run: cp apkpure_app_887.apk /tmp/myworkspace/test.apk
